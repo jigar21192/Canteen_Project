@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cart_recycle"
+            android:clipToPadding="false"
+            android:scrollbars="vertical">
+
+
+        </android.support.v7.widget.RecyclerView>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/prieLayout"
+            android:layout_below="@id/cart_recycle">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Total Price"
+                    android:textSize="25dp"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textSize="30dp"
+                    android:hint="Price"
+                    android:gravity="center"
+                    android:id="@+id/tprice"/>
+
+            </TableRow>
+        </TableLayout>
+        <Button
+            android:layout_below="@id/prieLayout"
+            android:layout_width="150dp"
+            android:gravity="center"
+           android:layout_marginBottom="16dp"
+            android:onClick="paaymentClick"
+            android:textSize="16dp"
+            android:text="Check Out"
+            android:background="@color/colorPrimary"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</ScrollView>
